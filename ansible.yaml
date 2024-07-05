@@ -2,11 +2,5 @@
 - name: Check if node can ping Ansible server
   hosts: k8s
   tasks:
-    - name: Ping the Ansible server
-      ansible.builtin.shell: ping -c 3 192.168.122.96
-      register: ping_result
-      ignore_errors: yes
-
-    - name: Display ping result
-      ansible.builtin.debug:
-        msg: "{{ ping_result.stdout }}"
+    - name: Ping
+      ping:
