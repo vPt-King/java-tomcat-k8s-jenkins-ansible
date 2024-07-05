@@ -22,5 +22,11 @@ pipeline{
                 sh "mvn clean install"
             }
         }
+        stage("ansible")
+        {
+            steps{
+                ansiblePlaybook credentialsId: 'slave-ssh', installation: 'Ansible', inventory: '/home/thanh/jenkins/workspace/java_tomcat/inventory.ini', playbook: '/home/thanh/jenkins/workspace/java_tomcat/ansible.yaml', vaultTmpPath: ''
+            }
+        }
     }
 }
