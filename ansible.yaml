@@ -1,7 +1,7 @@
 ---
 - name: Test connection to localhost
-  hosts: localhosts
+  hosts: all
   tasks:
-    - name: update localhost
+    - name: ping all
       ping:
         
