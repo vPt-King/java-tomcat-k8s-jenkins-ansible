@@ -1,5 +1,5 @@
 pipeline{
-    agent { label "localhost" }
+    agent { label "slave" }
     tools{
         maven 'maven'
     }
@@ -7,7 +7,7 @@ pipeline{
         stage("clone")
         {
             steps{
-                git 'https://github.com/vPt-King/javatomcat-k8s-jenkins-ansible.git'
+                git 'https://github.com/vPt-King/java-tomcat-k8s-jenkins-ansible.git'
             }
         }
         stage("test")
