@@ -22,11 +22,6 @@ pipeline{
                 sh "mvn clean install"
             }
         }
-        stage("ansible")
-        {
-            steps{
-                ansiblePlaybook installation: 'Ansible', inventory: '/var/jenkins_home/workspace/java_tomcat/inventory.ini', playbook: '/var/jenkins_home/workspace/java_tomcat/ansible.yaml', vaultTmpPath: ''
-            }
-        }
+        
     }
 }
