@@ -1,5 +1,5 @@
 pipeline{
-    agent { label "localhost" }
+    agent any
     tools{
         maven 'maven'
     }
