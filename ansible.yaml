@@ -1,9 +1,7 @@
 ---
 - name: Test connection to localhost
   hosts: localhosts
-  become: yes
   tasks:
     - name: update localhost
-      apt:
-        update-cache: yes
+      ping:
         
