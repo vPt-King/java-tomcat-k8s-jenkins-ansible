@@ -1,6 +1,6 @@
 ---
 - name: Test connection to localhost
-  hosts: localhost
+  hosts: localhosts
   become: yes
   tasks:
     - name: update localhost
