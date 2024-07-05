@@ -25,7 +25,7 @@ pipeline{
         stage("ansible")
         {
             steps{
-                ansiblePlaybook credentialsId: 'slave-ssh', installation: 'Ansible', inventory: '/home/thanh/jenkins/workspace/java_tomcat/inventory.ini', playbook: '/home/thanh/jenkins/workspace/java_tomcat/ansible.yaml', vaultTmpPath: ''
+                ansiblePlaybook installation: 'Ansible', inventory: '/var/jenkins_home/workspace/java_tomcat/inventory.ini', playbook: '/var/jenkins_home/workspace/java_tomcat/ansible.yaml', vaultTmpPath: ''
             }
         }
     }
