@@ -22,6 +22,14 @@ pipeline{
                 sh "mvn clean install"
             }
         }
+        stage("build image")
+        {
+            steps{
+                withDockerRegistry(url: 'https://index.docker.io/v1/') {
+                    sh "docker build -f Dockerfile -t thanhvu638/javaweb:${BUILD_ID}"
+                }
+            }
+        }
         stage("connect ansible")
         {
             steps{
