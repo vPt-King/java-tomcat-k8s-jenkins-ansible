@@ -10,4 +10,4 @@ sudo docker run --name jenkins --restart=on-failure --detach \
  --volume jenkins-docker-certs:/certs/client:ro \
  jenkins:demo
 
- test
+ test s
