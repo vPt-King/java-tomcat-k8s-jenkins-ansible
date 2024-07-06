@@ -22,6 +22,11 @@ pipeline{
                 sh "mvn clean install"
             }
         }
-        
+        stage("connect ansible")
+        {
+            steps{
+                ansiblePlaybook credentialsId: 'thanh', installation: 'Ansible', inventory: '/home/thanhnga/Documents/learn/project/javaweb/inventory.ini', playbook: '/home/thanhnga/Documents/learn/project/javaweb/ansible.yaml', vaultTmpPath: ''
+            }
+        }
     }
 }
