@@ -25,7 +25,7 @@ pipeline{
         stage("connect ansible")
         {
             steps{
-                ansiblePlaybook credentialsId: 'thanhnga', installation: 'Ansible', inventory: '/var/lib/jenkins/workspace/java-tomcat/inventory.yaml', playbook: '/var/lib/jenkins/workspace/java-tomcat/ansible.yaml', vaultTmpPath: ''
+                ansiblePlaybook credentialsId: 'thanhnga', installation: 'Ansible', inventory: '/var/lib/jenkins/workspace/java-tomcat/inventory.ini', playbook: '/var/lib/jenkins/workspace/java-tomcat/ansible.yml', vaultTmpPath: ''
             }
         }
     }
