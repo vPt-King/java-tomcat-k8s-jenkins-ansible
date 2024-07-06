@@ -9,3 +9,5 @@ sudo docker run --name jenkins --restart=on-failure --detach \
  --volume jenkins-data:/var/jenkins_home \
  --volume jenkins-docker-certs:/certs/client:ro \
  jenkins:demo
+
+ test
