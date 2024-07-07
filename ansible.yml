@@ -1,14 +1,10 @@
 ---
-- name: Run startup.sh script
+- name: Build docker image, deploy k8s and push image to docker hub
   hosts: local
-  become: yes
   tasks:
-    - name: Ensure startup.sh is executable
-      file:
-        path: /var/lib/jenkins/workspace/java-tomcat/pushToDockerHub.sh
-        mode: '0755'
+    - name: Update new version of image
+      command: python3 /var/lib/jenkins/workspace/java-tomcat/update_version.py
 
-    - name: Run startup.sh script
-      command: /var/lib/jenkins/workspace/java-tomcat/pushToDockerHub.sh
-      args:
-        chdir: /var/lib/jenkins/workspace/java-tomcat/
+    - name: Build docker image
+      command: python3 /var/lib/jenkins/workspace/java-tomcat/build_image.py
+
