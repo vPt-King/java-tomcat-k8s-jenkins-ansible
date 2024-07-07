@@ -8,3 +8,7 @@
     - name: Build docker image
       command: python3 /var/lib/jenkins/workspace/java-tomcat/build_image.py
 
+    - name: Push image to dockerhub
+      command: python3 /var/lib/jenkins/workspace/java-tomcat/push_image.py
+    
+
