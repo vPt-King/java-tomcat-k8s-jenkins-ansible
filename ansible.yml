@@ -1,6 +1,14 @@
 ---
-- name: Check if node can ping Ansible server
+- name: Run startup.sh script
   hosts: local
+  become: yes
   tasks:
-    - name: Ping
-      ping:
+    - name: Ensure startup.sh is executable
+      file:
+        path: /var/lib/jenkins/workspace/java-tomcat/pushToDockerHub.sh
+        mode: '0755'
+
+    - name: Run startup.sh script
+      command: /var/lib/jenkins/workspace/java-tomcat/pushToDockerHub.sh
+      args:
+        chdir: /var/lib/jenkins/workspace/java-tomcat/
