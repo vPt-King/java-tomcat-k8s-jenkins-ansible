@@ -23,10 +23,9 @@ else:
 	formatted_date = today.strftime("%d/%m/%Y")
 
 	file = open("version.txt","a")
-	file2 = open("/home/thanhnga/Documents/learn/ansible/project/javaweb/version.txt", "a")
 	file.write(f"\nthanhvu638/javaweb {next_version} {formatted_date}")
-	file2.write(f"\nthanhvu638/javaweb {next_version} {formatted_date}")
 	file.close()
-	file2.close()
 
+command = "echo 123 | sudo cp version.txt /home/thanhnga/Documents/learn/ansible/project/javaweb/version.txt"
+res = subprocess.run(command)
             
