@@ -6,7 +6,7 @@
       command: python3 /var/lib/jenkins/workspace/java-tomcat/update_version.py
     
     - name: Update new version in source code
-      sudo: yes
+      sudo: true
       sudo_user: thanhnga
       shell: cp /var/lib/jenkins/workspace/java-tomcat/version.txt /home/thanhnga/Documents/learn/ansible/project/javaweb/version.txt
 
