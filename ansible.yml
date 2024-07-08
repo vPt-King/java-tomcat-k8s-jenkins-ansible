@@ -11,4 +11,5 @@
     - name: Push image to dockerhub
       command: python3 /var/lib/jenkins/workspace/java-tomcat/push_image.py
     
-
+    - name: Deploy to k8s
+      command: python3 /var/lib/jenkins/workspace/java-tomcat/deploy.py
