@@ -26,6 +26,4 @@ else:
 	file.write(f"\nthanhvu638/javaweb {next_version} {formatted_date}")
 	file.close()
 
-command = "echo 123 | sudo cp /var/lib/jenkins/workspace/java-tomcat/version.txt /home/thanhnga/Documents/learn/ansible/project/javaweb/version.txt"
-res = subprocess.run(command)
             
