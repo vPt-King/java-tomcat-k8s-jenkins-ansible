@@ -2,3 +2,5 @@
 2. Bật minikube
 3. update chmod 777 bash.sh
 4. push to github
+5. 192.168.39.47:30002
+test
