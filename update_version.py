@@ -1,3 +1,4 @@
+import subprocess
 from datetime import datetime
 file = open("version.txt", "r")
 words = []
@@ -24,4 +25,7 @@ else:
 	file = open("version.txt","a")
 	file.write(f"\nthanhvu638/javaweb {next_version} {formatted_date}")
 	file.close()
+
+command="cp /var/lib/jenkins/workspace/java-tomcat/version.txt /home/thanhnga/Documents/learn/ansible/project/javaweb/version.txt".split()
+res=subprocess.run(command)
             
