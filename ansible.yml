@@ -6,7 +6,7 @@
       command: python3 /var/lib/jenkins/workspace/java-tomcat/update_version.py
     
     - name: Update new version in source code
-      shell: cp /var/lib/jenkins/workspace/java-tomcat/version.txt /home/thanhnga/Documents/learn/ansible/project/javaweb/version.txt
+      shell: echo "123" | sudo cp /var/lib/jenkins/workspace/java-tomcat/version.txt /home/thanhnga/Documents/learn/ansible/project/javaweb/version.txt
 
     - name: Build docker image
       command: python3 /var/lib/jenkins/workspace/java-tomcat/build_image.py
