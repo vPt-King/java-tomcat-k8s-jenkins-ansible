@@ -3,14 +3,13 @@
 3. update chmod 777 bash.sh
 4. push to github
 5. 192.168.39.47:30002
-test
 
 
 
 
 
 
+------------------------------------------------------------------------
 
+Lỗi: Không thấy update mặc dù log của ansible và jenkins không có lỗi gì
 
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
