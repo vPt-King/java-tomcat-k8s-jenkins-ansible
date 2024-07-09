@@ -1,5 +1,5 @@
 ---
-- name: Build docker image, deploy k8s and push image to docker hub
+- name: pull image, create yaml file and deploy tomcat to k8s
   hosts: local
   tasks:
     - name: pull image from dockerhub
