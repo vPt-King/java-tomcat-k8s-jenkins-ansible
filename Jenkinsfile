@@ -39,7 +39,7 @@ pipeline{
         stage("ansible")
         {
             steps{
-                ansiblePlaybook credentialsId: 'thanhnga', installation: 'Ansible', inventory: '/var/lib/jenkins/workspace/java-tomcat/inventory.ini', playbook: '/var/lib/jenkins/workspace/java-tomcat/ansible.yml', vaultTmpPath: '', extras: "version=${BUILD_ID}"
+                sh "/usr/bin/ansible-playbook /var/lib/jenkins/workspace/java-tomcat/ansible.yml -i /var/lib/jenkins/workspace/java-tomcat/inventory.ini -e \"version=${BUILD_ID}\""
             }
         }
     }
