@@ -11,3 +11,6 @@
         dest: /var/lib/jenkins/workspace/java-tomcat/app.yaml
       vars:
         version: "{{ version }}"
+      
+    - name: deploy application to k8s
+      shell: ./bash
