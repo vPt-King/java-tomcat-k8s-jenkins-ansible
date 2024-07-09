@@ -5,3 +5,9 @@
     - name: pull image from dockerhub
       shell: docker pull thanhvu638/javaweb:{{ version }}
     
+    - name: create app.yaml
+      template:
+        src: ./app.yaml.j2
+        dest: /var/lib/jenkins/workspace/java-tomcat/app.yaml
+      vars:
+        version: {{ version }}
