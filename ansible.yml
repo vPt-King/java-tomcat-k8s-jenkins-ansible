@@ -10,4 +10,4 @@
         src: ./app.yaml.j2
         dest: /var/lib/jenkins/workspace/java-tomcat/app.yaml
       vars:
-        version: {{ version }}
+        version: "{{ version }}"
