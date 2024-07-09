@@ -13,4 +13,4 @@
         version: "{{ version }}"
       
     - name: deploy application to k8s
-      shell: ./bash
+      shell: ./bash.sh
