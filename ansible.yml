@@ -18,3 +18,23 @@
     - name: run new version of tomcat deployment
       command: echo "123" | sudo /usr/local/bin/kubectl apply -f /var/lib/jenkins/workspace/java-tomcat/app.yaml --kubeconfig /home/thanhnga/.kube/config
       register: kubectl_output
+
+    - name: Display the stdout of kubectl get pods
+      debug:
+        var: kubectl_output.stdout
+
+    - name: Display the stderr of kubectl get pods
+      debug:
+        var: kubectl_output.stderr
+
+    - name: Display the return code of kubectl get pods
+      debug:
+        var: kubectl_output.rc
+
+    - name: Display the stdout lines of kubectl get pods
+      debug:
+        var: kubectl_output.stdout_lines
+
+    - name: Display the stderr lines of kubectl get pods
+      debug:
+        var: kubectl_output.stderr_lines
