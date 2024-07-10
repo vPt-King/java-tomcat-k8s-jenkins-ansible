@@ -12,6 +12,8 @@
       vars:
         version: "{{ version }}"
       
-    - name: deploy application to k8s
+    - name: delete old version tomcat deployment
+      command: echo "123" | sudo /usr/local/bin/kubectl delete deployment tomcat-deployment --kubeconfig /home/thanhnga/.kube/config
+    
+    - name: run new version of tomcat deployment
       command: echo "123" | sudo /usr/local/bin/kubectl apply -f app.yaml --kubeconfig /home/thanhnga/.kube/config
-      
