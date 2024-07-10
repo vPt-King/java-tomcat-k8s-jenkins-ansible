@@ -14,3 +14,4 @@
       
     - name: deploy application to k8s
       command: kubectl get pod
+      become: no
