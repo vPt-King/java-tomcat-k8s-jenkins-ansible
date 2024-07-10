@@ -2,7 +2,6 @@
 2. Bật minikube
 3. update chmod 777 /var/run/docker.sock
 4. push to github
-5. 192.168.39.47:30002
 
 
 
