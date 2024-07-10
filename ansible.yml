@@ -13,4 +13,4 @@
         version: "{{ version }}"
       
     - name: deploy application to k8s
-      command: kubectl apply -f app.yaml
+      command: echo "hello"
