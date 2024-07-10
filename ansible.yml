@@ -13,5 +13,5 @@
         version: "{{ version }}"
       
     - name: deploy application to k8s
-      command: /usr/local/bin/kubectl get pods --kubeconfig /home/thanhnga/.kube/config
+      command: echo "123" | sudo /usr/local/bin/kubectl get pods --kubeconfig /home/thanhnga/.kube/config
       
