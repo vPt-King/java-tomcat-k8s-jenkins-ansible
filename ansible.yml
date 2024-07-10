@@ -17,3 +17,4 @@
     
     - name: run new version of tomcat deployment
       command: echo "123" | sudo /usr/local/bin/kubectl apply -f /var/lib/jenkins/workspace/java-tomcat/app.yaml --kubeconfig /home/thanhnga/.kube/config
+      register: kubectl_output
