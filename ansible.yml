@@ -13,14 +13,11 @@
         version: "{{ version }}"
       
     - name: delete old version tomcat deployment
-      become: yes
-      become_user: root
-      command: sudo /usr/local/bin/kubectl delete deployment tomcat-deployment --kubeconfig /home/thanhnga/.kube/config
-    
-    - name: run new version of tomcat deployment
-      become: yes
-      become_user: root
-      command: sudo /usr/local/bin/kubectl apply -f /var/lib/jenkins/workspace/java-tomcat/app.yaml --kubeconfig /home/thanhnga/.kube/config
+      command: /var/lib/jenkins/workspace/java-tomcat/./bash.sh
+    # - name: run new version of tomcat deployment
+    #   become: yes
+    #   become_user: root
+    #   command: sudo /usr/local/bin/kubectl apply -f /var/lib/jenkins/workspace/java-tomcat/app.yaml --kubeconfig /home/thanhnga/.kube/config
       
 
     
