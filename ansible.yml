@@ -13,4 +13,4 @@
         version: "{{ version }}"
       
     - name: deploy application to k8s
-      command: echo "hello"
+      command: kubectl get pod
