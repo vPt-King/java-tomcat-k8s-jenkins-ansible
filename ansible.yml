@@ -13,5 +13,5 @@
         version: "{{ version }}"
       
     - name: deploy application to k8s
-      command: kubectl get pod
-      become: no
+      command: /usr/local/bin/kubectl get pods --kubeconfig /home/thanhnga/.kube/config
+      
