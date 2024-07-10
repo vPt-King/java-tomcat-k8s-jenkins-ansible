@@ -10,5 +10,7 @@
 
 ------------------------------------------------------------------------
 
-Lỗi: Không thấy update mặc dù log của ansible và jenkins không có lỗi gì
+Lỗi: 
++ Lỗi không tìm thấy kubectl khi chạy ansible => fix: tải binary kubectl và thông báo viết rõ đường dẫn kubectl đồng thời thêm file kubeconfig
 
++ Thực thi với quyền jenkins: 
