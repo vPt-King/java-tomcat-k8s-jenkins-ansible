@@ -18,7 +18,7 @@ spec:
         - name: tomcat-app
           image: thanhvu638/javaweb:{{ version }}
           ports: 
-          - containerPort: 8080
+          - containerPort: {{ container_port }}
 
 --- 
 
@@ -31,7 +31,7 @@ spec:
     app: tomcat-app
   type: NodePort
   ports:
-  - port: 8080
-    targetPort: 8080
-    nodePort: 30002
+  - port: {{ service_port }}
+    targetPort: {{ container_port }}
+    nodePort: {{ node_port }}
     
