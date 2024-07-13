@@ -12,10 +12,10 @@ spec:
   template:
     metadata:
       labels:
-        app: tomcat-app-1
+        app: tomcat-app
     spec:
       containers:
-        - name: tomcat-app-1
+        - name: tomcat-app
           image: thanhvu638/javaweb:{{ version }}
           ports: 
           - containerPort: {{ container_port }}
