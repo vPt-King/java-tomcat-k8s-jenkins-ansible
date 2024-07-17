@@ -18,5 +18,5 @@ fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["kubectl", "get", "pod"
 
 + Thực thi với quyền jenkins: chỉnh lại mật khẩu của jenkins user: sudo passwd jenkins, thêm user jenkins vào sudoers
 
-
++
 
